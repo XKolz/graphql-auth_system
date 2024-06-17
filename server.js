@@ -56,44 +56,6 @@ const typeDefs = gql`
 
 const secretKey = 'your_secret_key';
 
-// const resolvers = {
-//   Query: {
-//     hello: () => 'Hello, world!',
-//     users: async (_, __, { user }) => {
-//       if (!user) throw new Error('Authentication required');
-//       console.log('Authenticated user:', user);
-//       return await User.find();
-//     },
-//   },
-//   Mutation: {
-//     addUser: async (_, { name, email, password }) => {
-//       const hashedPassword = await bcrypt.hash(password, 10);
-//       const user = new User({ name, email, password: hashedPassword });
-//       await user.save();
-
-//       const token = jwt.sign({ userId: user.id }, secretKey);
-//       console.log('User added:', user);
-//       return {
-//         token,
-//         user,
-//       };
-//     },
-//     login: async (_, { email, password }) => {
-//       const user = await User.findOne({ email });
-//       if (!user) throw new Error('No user found');
-
-//       const valid = await bcrypt.compare(password, user.password);
-//       if (!valid) throw new Error('Invalid password');
-
-//       const token = jwt.sign({ userId: user.id }, secretKey);
-//       console.log('User logged in:', user);
-//       return {
-//         token,
-//         user,
-//       };
-//     },
-//   },
-// };
 const resolvers = {
   Query: {
     hello: () => 'Hello, world!',
