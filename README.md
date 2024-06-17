@@ -105,7 +105,7 @@ Replace your_jwt_token with the token received from the login mutation
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer your_jwt_token" --data '{ "query": "{ users { id name email } }" }' http://localhost:4000/graphql
 
 Project Structure
-    ```bash
+
     graphql-project/
     ├── node_modules/
     ├── .env
