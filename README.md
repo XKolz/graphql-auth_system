@@ -89,12 +89,13 @@ You can interact with the GraphQL server using a tool like curl or Postman.
 
 Register a New User
 curl -X POST -H "Content-Type: application/json" --data '{ "query": "mutation { addUser(name: \"John Doe\", email: \"john@example.com\", password: \"password123\") { token user { id name email } } }" }' http://localhost:4000/graphql
-    ```bash
+
+
     mutation { addUser(name: "John Doe", email: "john@example.com", password: "password123") { token user { id name email } } }
 
 Login
 curl -X POST -H "Content-Type: application/json" --data '{ "query": "mutation { login(email: \"john@example.com\", password: \"password123\") { token user { id name email } } }" }' http://localhost:4000/graphql
-    ```bash
+
         mutation { login(email: "john@example.com", password: "password123") { token user { id name email } } }
     
 
