@@ -9,6 +9,7 @@ to connect to database of your choice
 
 To show all the users:
  db.users.find().pretty() -->
+ 
 
 
  # GraphQL Authentication Project
